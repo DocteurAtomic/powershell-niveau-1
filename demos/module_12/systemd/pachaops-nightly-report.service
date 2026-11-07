@@ -1,0 +1,10 @@
+# Module 12, clip 12.3: the service that the timer starts. Copy both files to
+# ~/.config/systemd/user/, replace the two paths by those of your computer (the full path of
+# pwsh, and of the clone), then: systemctl --user daemon-reload
+# systemctl --user enable --now pachaops-nightly-report.timer
+[Unit]
+Description=Morning inventory of the PowerShell course
+
+[Service]
+Type=oneshot
+ExecStart=/opt/microsoft/powershell/7/pwsh -NoProfile -NonInteractive -File %h/powershell-niveau-1/demos/module_12/05-nightly-report.ps1

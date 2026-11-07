@@ -1,0 +1,11 @@
+# Module 12, clip 12.3: every day at 6:30. Persistent=true runs a missed run at the next start
+# of the computer. Without loginctl enable-linger, the timer runs only while you are logged on.
+[Unit]
+Description=Every day at 6:30, the morning inventory
+
+[Timer]
+OnCalendar=*-*-* 06:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
