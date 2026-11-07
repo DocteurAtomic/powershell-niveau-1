@@ -1,0 +1,9 @@
+{
+  "BackupPath": "lab/backups/sql1",
+  "Days": 7,
+  "ErrorlogPath": "data/errorlog",
+  "Export": {
+    "Folder": "lab/exports",
+    "Delimiter": ";"
+  }
+}
